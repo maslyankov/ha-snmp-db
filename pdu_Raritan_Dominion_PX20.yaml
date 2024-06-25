@@ -1,0 +1,842 @@
+sensor:
+  - platform: snmp
+    name: "Raritan PDU System Name"
+    host: "192.168.1.123"
+    community: public
+    baseoid: "1.3.6.1.2.1.1.5.0"
+    unique_id: "raritan_pdu_system_name"
+
+  - platform: snmp
+    name: "Raritan PDU System Location"
+    host: "192.168.1.123"
+    community: public
+    baseoid: "1.3.6.1.2.1.1.6.0"
+    unique_id: "raritan_pdu_system_location"
+
+  - platform: snmp
+    name: "Raritan PDU Uptime"
+    host: "192.168.1.123"
+    community: public
+    baseoid: "1.3.6.1.2.1.1.3.0"
+    unique_id: "raritan_pdu_uptime"
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 1 Current"
+    host: "192.168.1.123"
+    community: public
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.4.1"
+    unit_of_measurement: 'A'
+    value_template: '{{ (value | int) / 1000 }}'
+    unique_id: "raritan_pdu_outlet_1_current"
+    device_class: current
+    state_class: measurement
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 1 Voltage"
+    host: "192.168.1.123"
+    community: public
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.6.1"
+    unit_of_measurement: 'V'
+    value_template: '{{ (value | int) / 1000 }}'
+    unique_id: "raritan_pdu_outlet_1_voltage"
+    device_class: voltage
+    state_class: measurement
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 1 Active Power"
+    host: "192.168.1.123"
+    community: public
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.7.1"
+    unit_of_measurement: 'W'
+    unique_id: "raritan_pdu_outlet_1_active_power"
+    device_class: power
+    state_class: measurement
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 2 Current"
+    host: "192.168.1.123"
+    community: public
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.4.2"
+    unit_of_measurement: 'A'
+    value_template: '{{ (value | int) / 1000 }}'
+    unique_id: "raritan_pdu_outlet_2_current"
+    device_class: current
+    state_class: measurement
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 2 Voltage"
+    host: "192.168.1.123"
+    community: public
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.6.2"
+    unit_of_measurement: 'V'
+    value_template: '{{ (value | int) / 1000 }}'
+    unique_id: "raritan_pdu_outlet_2_voltage"
+    device_class: voltage
+    state_class: measurement
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 2 Active Power"
+    host: "192.168.1.123"
+    community: public
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.7.2"
+    unit_of_measurement: 'W'
+    unique_id: "raritan_pdu_outlet_2_active_power"
+    device_class: power
+    state_class: measurement
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 3 Current"
+    host: "192.168.1.123"
+    community: public
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.4.3"
+    unit_of_measurement: 'A'
+    value_template: '{{ (value | int) / 1000 }}'
+    unique_id: "raritan_pdu_outlet_3_current"
+    device_class: current
+    state_class: measurement
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 3 Voltage"
+    host: "192.168.1.123"
+    community: public
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.6.3"
+    unit_of_measurement: 'V'
+    value_template: '{{ (value | int) / 1000 }}'
+    unique_id: "raritan_pdu_outlet_3_voltage"
+    device_class: voltage
+    state_class: measurement
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 3 Active Power"
+    host: "192.168.1.123"
+    community: public
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.7.3"
+    unit_of_measurement: 'W'
+    unique_id: "raritan_pdu_outlet_3_active_power"
+    device_class: power
+    state_class: measurement
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 4 Current"
+    host: "192.168.1.123"
+    community: public
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.4.4"
+    unit_of_measurement: 'A'
+    value_template: '{{ (value | int) / 1000 }}'
+    unique_id: "raritan_pdu_outlet_4_current"
+    device_class: current
+    state_class: measurement
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 4 Voltage"
+    host: "192.168.1.123"
+    community: public
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.6.4"
+    unit_of_measurement: 'V'
+    value_template: '{{ (value | int) / 1000 }}'
+    unique_id: "raritan_pdu_outlet_4_voltage"
+    device_class: voltage
+    state_class: measurement
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 4 Active Power"
+    host: "192.168.1.123"
+    community: public
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.7.4"
+    unit_of_measurement: 'W'
+    unique_id: "raritan_pdu_outlet_4_active_power"
+    device_class: power
+    state_class: measurement
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 5 Current"
+    host: "192.168.1.123"
+    community: public
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.4.5"
+    unit_of_measurement: 'A'
+    value_template: '{{ (value | int) / 1000 }}'
+    unique_id: "raritan_pdu_outlet_5_current"
+    device_class: current
+    state_class: measurement
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 5 Voltage"
+    host: "192.168.1.123"
+    community: public
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.6.5"
+    unit_of_measurement: 'V'
+    value_template: '{{ (value | int) / 1000 }}'
+    unique_id: "raritan_pdu_outlet_5_voltage"
+    device_class: voltage
+    state_class: measurement
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 5 Active Power"
+    host: "192.168.1.123"
+    community: public
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.7.5"
+    unit_of_measurement: 'W'
+    unique_id: "raritan_pdu_outlet_5_active_power"
+    device_class: power
+    state_class: measurement
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 6 Current"
+    host: "192.168.1.123"
+    community: public
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.4.6"
+    unit_of_measurement: 'A'
+    value_template: '{{ (value | int) / 1000 }}'
+    unique_id: "raritan_pdu_outlet_6_current"
+    device_class: current
+    state_class: measurement
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 6 Voltage"
+    host: "192.168.1.123"
+    community: public
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.6.6"
+    unit_of_measurement: 'V'
+    value_template: '{{ (value | int) / 1000 }}'
+    unique_id: "raritan_pdu_outlet_6_voltage"
+    device_class: voltage
+    state_class: measurement
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 6 Active Power"
+    host: "192.168.1.123"
+    community: public
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.7.6"
+    unit_of_measurement: 'W'
+    unique_id: "raritan_pdu_outlet_6_active_power"
+    device_class: power
+    state_class: measurement
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 7 Current"
+    host: "192.168.1.123"
+    community: public
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.4.7"
+    unit_of_measurement: 'A'
+    value_template: '{{ (value | int) / 1000 }}'
+    unique_id: "raritan_pdu_outlet_7_current"
+    device_class: current
+    state_class: measurement
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 7 Voltage"
+    host: "192.168.1.123"
+    community: public
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.6.7"
+    unit_of_measurement: 'V'
+    value_template: '{{ (value | int) / 1000 }}'
+    unique_id: "raritan_pdu_outlet_7_voltage"
+    device_class: voltage
+    state_class: measurement
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 7 Active Power"
+    host: "192.168.1.123"
+    community: public
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.7.7"
+    unit_of_measurement: 'W'
+    unique_id: "raritan_pdu_outlet_7_active_power"
+    device_class: power
+    state_class: measurement
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 8 Current"
+    host: "192.168.1.123"
+    community: public
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.4.8"
+    unit_of_measurement: 'A'
+    value_template: '{{ (value | int) / 1000 }}'
+    unique_id: "raritan_pdu_outlet_8_current"
+    device_class: current
+    state_class: measurement
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 8 Voltage"
+    host: "192.168.1.123"
+    community: public
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.6.8"
+    unit_of_measurement: 'V'
+    value_template: '{{ (value | int) / 1000 }}'
+    unique_id: "raritan_pdu_outlet_8_voltage"
+    device_class: voltage
+    state_class: measurement
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 8 Active Power"
+    host: "192.168.1.123"
+    community: public
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.7.8"
+    unit_of_measurement: 'W'
+    unique_id: "raritan_pdu_outlet_8_active_power"
+    device_class: power
+    state_class: measurement
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 9 Current"
+    host: "192.168.1.123"
+    community: public
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.4.9"
+    unit_of_measurement: 'A'
+    value_template: '{{ (value | int) / 1000 }}'
+    unique_id: "raritan_pdu_outlet_9_current"
+    device_class: current
+    state_class: measurement
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 9 Voltage"
+    host: "192.168.1.123"
+    community: public
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.6.9"
+    unit_of_measurement: 'V'
+    value_template: '{{ (value | int) / 1000 }}'
+    unique_id: "raritan_pdu_outlet_9_voltage"
+    device_class: voltage
+    state_class: measurement
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 9 Active Power"
+    host: "192.168.1.123"
+    community: public
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.7.9"
+    unit_of_measurement: 'W'
+    unique_id: "raritan_pdu_outlet_9_active_power"
+    device_class: power
+    state_class: measurement
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 10 Current"
+    host: "192.168.1.123"
+    community: public
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.4.10"
+    unit_of_measurement: 'A'
+    value_template: '{{ (value | int) / 1000 }}'
+    unique_id: "raritan_pdu_outlet_10_current"
+    device_class: current
+    state_class: measurement
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 10 Voltage"
+    host: "192.168.1.123"
+    community: public
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.6.10"
+    unit_of_measurement: 'V'
+    value_template: '{{ (value | int) / 1000 }}'
+    unique_id: "raritan_pdu_outlet_10_voltage"
+    device_class: voltage
+    state_class: measurement
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 10 Active Power"
+    host: "192.168.1.123"
+    community: public
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.7.10"
+    unit_of_measurement: 'W'
+    unique_id: "raritan_pdu_outlet_10_active_power"
+    device_class: power
+    state_class: measurement
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 11 Current"
+    host: "192.168.1.123"
+    community: public
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.4.11"
+    unit_of_measurement: 'A'
+    value_template: '{{ (value | int) / 1000 }}'
+    unique_id: "raritan_pdu_outlet_11_current"
+    device_class: current
+    state_class: measurement
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 11 Voltage"
+    host: "192.168.1.123"
+    community: public
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.6.11"
+    unit_of_measurement: 'V'
+    value_template: '{{ (value | int) / 1000 }}'
+    unique_id: "raritan_pdu_outlet_11_voltage"
+    device_class: voltage
+    state_class: measurement
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 11 Active Power"
+    host: "192.168.1.123"
+    community: public
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.7.11"
+    unit_of_measurement: 'W'
+    unique_id: "raritan_pdu_outlet_11_active_power"
+    device_class: power
+    state_class: measurement
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 12 Current"
+    host: "192.168.1.123"
+    community: public
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.4.12"
+    unit_of_measurement: 'A'
+    value_template: '{{ (value | int) / 1000 }}'
+    unique_id: "raritan_pdu_outlet_12_current"
+    device_class: current
+    state_class: measurement
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 12 Voltage"
+    host: "192.168.1.123"
+    community: public
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.6.12"
+    unit_of_measurement: 'V'
+    value_template: '{{ (value | int) / 1000 }}'
+    unique_id: "raritan_pdu_outlet_12_voltage"
+    device_class: voltage
+    state_class: measurement
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 12 Active Power"
+    host: "192.168.1.123"
+    community: public
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.7.12"
+    unit_of_measurement: 'W'
+    unique_id: "raritan_pdu_outlet_12_active_power"
+    device_class: power
+    state_class: measurement
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 13 Current"
+    host: "192.168.1.123"
+    community: public
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.4.13"
+    unit_of_measurement: 'A'
+    value_template: '{{ (value | int) / 1000 }}'
+    unique_id: "raritan_pdu_outlet_13_current"
+    device_class: current
+    state_class: measurement
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 13 Voltage"
+    host: "192.168.1.123"
+    community: public
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.6.13"
+    unit_of_measurement: 'V'
+    value_template: '{{ (value | int) / 1000 }}'
+    unique_id: "raritan_pdu_outlet_13_voltage"
+    device_class: voltage
+    state_class: measurement
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 13 Active Power"
+    host: "192.168.1.123"
+    community: public
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.7.13"
+    unit_of_measurement: 'W'
+    unique_id: "raritan_pdu_outlet_13_active_power"
+    device_class: power
+    state_class: measurement
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 14 Current"
+    host: "192.168.1.123"
+    community: public
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.4.14"
+    unit_of_measurement: 'A'
+    value_template: '{{ (value | int) / 1000 }}'
+    unique_id: "raritan_pdu_outlet_14_current"
+    device_class: current
+    state_class: measurement
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 14 Voltage"
+    host: "192.168.1.123"
+    community: public
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.6.14"
+    unit_of_measurement: 'V'
+    value_template: '{{ (value | int) / 1000 }}'
+    unique_id: "raritan_pdu_outlet_14_voltage"
+    device_class: voltage
+    state_class: measurement
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 14 Active Power"
+    host: "192.168.1.123"
+    community: public
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.7.14"
+    unit_of_measurement: 'W'
+    unique_id: "raritan_pdu_outlet_14_active_power"
+    device_class: power
+    state_class: measurement
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 15 Current"
+    host: "192.168.1.123"
+    community: public
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.4.15"
+    unit_of_measurement: 'A'
+    value_template: '{{ (value | int) / 1000 }}'
+    unique_id: "raritan_pdu_outlet_15_current"
+    device_class: current
+    state_class: measurement
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 15 Voltage"
+    host: "192.168.1.123"
+    community: public
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.6.15"
+    unit_of_measurement: 'V'
+    value_template: '{{ (value | int) / 1000 }}'
+    unique_id: "raritan_pdu_outlet_15_voltage"
+    device_class: voltage
+    state_class: measurement
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 15 Active Power"
+    host: "192.168.1.123"
+    community: public
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.7.15"
+    unit_of_measurement: 'W'
+    unique_id: "raritan_pdu_outlet_15_active_power"
+    device_class: power
+    state_class: measurement
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 16 Current"
+    host: "192.168.1.123"
+    community: public
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.4.16"
+    unit_of_measurement: 'A'
+    value_template: '{{ (value | int) / 1000 }}'
+    unique_id: "raritan_pdu_outlet_16_current"
+    device_class: current
+    state_class: measurement
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 16 Voltage"
+    host: "192.168.1.123"
+    community: public
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.6.16"
+    unit_of_measurement: 'V'
+    value_template: '{{ (value | int) / 1000 }}'
+    unique_id: "raritan_pdu_outlet_16_voltage"
+    device_class: voltage
+    state_class: measurement
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 16 Active Power"
+    host: "192.168.1.123"
+    community: public
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.7.16"
+    unit_of_measurement: 'W'
+    unique_id: "raritan_pdu_outlet_16_active_power"
+    device_class: power
+    state_class: measurement
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 17 Current"
+    host: "192.168.1.123"
+    community: public
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.4.17"
+    unit_of_measurement: 'A'
+    value_template: '{{ (value | int) / 1000 }}'
+    unique_id: "raritan_pdu_outlet_17_current"
+    device_class: current
+    state_class: measurement
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 17 Voltage"
+    host: "192.168.1.123"
+    community: public
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.6.17"
+    unit_of_measurement: 'V'
+    value_template: '{{ (value | int) / 1000 }}'
+    unique_id: "raritan_pdu_outlet_17_voltage"
+    device_class: voltage
+    state_class: measurement
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 17 Active Power"
+    host: "192.168.1.123"
+    community: public
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.7.17"
+    unit_of_measurement: 'W'
+    unique_id: "raritan_pdu_outlet_17_active_power"
+    device_class: power
+    state_class: measurement
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 18 Current"
+    host: "192.168.1.123"
+    community: public
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.4.18"
+    unit_of_measurement: 'A'
+    value_template: '{{ (value | int) / 1000 }}'
+    unique_id: "raritan_pdu_outlet_18_current"
+    device_class: current
+    state_class: measurement
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 18 Voltage"
+    host: "192.168.1.123"
+    community: public
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.6.18"
+    unit_of_measurement: 'V'
+    value_template: '{{ (value | int) / 1000 }}'
+    unique_id: "raritan_pdu_outlet_18_voltage"
+    device_class: voltage
+    state_class: measurement
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 18 Active Power"
+    host: "192.168.1.123"
+    community: public
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.7.18"
+    unit_of_measurement: 'W'
+    unique_id: "raritan_pdu_outlet_18_active_power"
+    device_class: power
+    state_class: measurement
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 19 Current"
+    host: "192.168.1.123"
+    community: public
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.4.19"
+    unit_of_measurement: 'A'
+    value_template: '{{ (value | int) / 1000 }}'
+    unique_id: "raritan_pdu_outlet_19_current"
+    device_class: current
+    state_class: measurement
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 19 Voltage"
+    host: "192.168.1.123"
+    community: public
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.6.19"
+    unit_of_measurement: 'V'
+    value_template: '{{ (value | int) / 1000 }}'
+    unique_id: "raritan_pdu_outlet_19_voltage"
+    device_class: voltage
+    state_class: measurement
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 19 Active Power"
+    host: "192.168.1.123"
+    community: public
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.7.19"
+    unit_of_measurement: 'W'
+    unique_id: "raritan_pdu_outlet_19_active_power"
+    device_class: power
+    state_class: measurement
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 20 Current"
+    host: "192.168.1.123"
+    community: public
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.4.20"
+    unit_of_measurement: 'A'
+    value_template: '{{ (value | int) / 1000 }}'
+    unique_id: "raritan_pdu_outlet_20_current"
+    device_class: current
+    state_class: measurement
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 20 Voltage"
+    host: "192.168.1.123"
+    community: public
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.6.20"
+    unit_of_measurement: 'V'
+    value_template: '{{ (value | int) / 1000 }}'
+    unique_id: "raritan_pdu_outlet_20_voltage"
+    device_class: voltage
+    state_class: measurement
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 20 Active Power"
+    host: "192.168.1.123"
+    community: public
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.7.20"
+    unit_of_measurement: 'W'
+    unique_id: "raritan_pdu_outlet_20_active_power"
+    device_class: power
+    state_class: measurement
+
+switch:
+  - platform: snmp
+    name: "Raritan PDU Outlet 1"
+    host: "192.168.1.123"
+    community: private
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.3.1"
+    payload_on: "1"
+    payload_off: "0"
+    vartype: Integer
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 2"
+    host: "192.168.1.123"
+    community: private
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.3.2"
+    payload_on: "1"
+    payload_off: "0"
+    vartype: Integer
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 3"
+    host: "192.168.1.123"
+    community: private
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.3.3"
+    payload_on: "1"
+    payload_off: "0"
+    vartype: Integer
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 4"
+    host: "192.168.1.123"
+    community: private
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.3.4"
+    payload_on: "1"
+    payload_off: "0"
+    vartype: Integer
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 5"
+    host: "192.168.1.123"
+    community: private
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.3.5"
+    payload_on: "1"
+    payload_off: "0"
+    vartype: Integer
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 6"
+    host: "192.168.1.123"
+    community: private
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.3.6"
+    payload_on: "1"
+    payload_off: "0"
+    vartype: Integer
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 7"
+    host: "192.168.1.123"
+    community: private
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.3.7"
+    payload_on: "1"
+    payload_off: "0"
+    vartype: Integer
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 8"
+    host: "192.168.1.123"
+    community: private
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.3.8"
+    payload_on: "1"
+    payload_off: "0"
+    vartype: Integer
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 9"
+    host: "192.168.1.123"
+    community: private
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.3.9"
+    payload_on: "1"
+    payload_off: "0"
+    vartype: Integer
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 10"
+    host: "192.168.1.123"
+    community: private
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.3.10"
+    payload_on: "1"
+    payload_off: "0"
+    vartype: Integer
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 11"
+    host: "192.168.1.123"
+    community: private
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.3.11"
+    payload_on: "1"
+    payload_off: "0"
+    vartype: Integer
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 12"
+    host: "192.168.1.123"
+    community: private
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.3.12"
+    payload_on: "1"
+    payload_off: "0"
+    vartype: Integer
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 13"
+    host: "192.168.1.123"
+    community: private
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.3.13"
+    payload_on: "1"
+    payload_off: "0"
+    vartype: Integer
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 14"
+    host: "192.168.1.123"
+    community: private
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.3.14"
+    payload_on: "1"
+    payload_off: "0"
+    vartype: Integer
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 15"
+    host: "192.168.1.123"
+    community: private
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.3.15"
+    payload_on: "1"
+    payload_off: "0"
+    vartype: Integer
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 16"
+    host: "192.168.1.123"
+    community: private
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.3.16"
+    payload_on: "1"
+    payload_off: "0"
+    vartype: Integer
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 17"
+    host: "192.168.1.123"
+    community: private
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.3.17"
+    payload_on: "1"
+    payload_off: "0"
+    vartype: Integer
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 18"
+    host: "192.168.1.123"
+    community: private
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.3.18"
+    payload_on: "1"
+    payload_off: "0"
+    vartype: Integer
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 19"
+    host: "192.168.1.123"
+    community: private
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.3.19"
+    payload_on: "1"
+    payload_off: "0"
+    vartype: Integer
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 20"
+    host: "192.168.1.123"
+    community: private
+    baseoid: "1.3.6.1.4.1.13742.4.1.2.2.1.3.20"
+    payload_on: "1"
+    payload_off: "0"
+    vartype: Integer
