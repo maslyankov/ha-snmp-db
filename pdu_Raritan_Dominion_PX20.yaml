@@ -21,6 +21,17 @@ sensor:
     unique_id: "raritan_pdu_uptime"
 
   - platform: snmp
+    name: "Raritan PDU CPU Temperature"
+    host: "192.168.1.123"
+    community: public
+    baseoid: "1.3.6.1.4.1.13742.4.1.3.1.5"
+    unit_of_measurement: '°C'
+    value_template: '{{ (value | int) / 10 }}'
+    unique_id: "raritan_pdu_cpu_temperature"
+    device_class: temperature
+    state_class: measurement
+
+  - platform: snmp
     name: "Raritan PDU Outlet 1 Current"
     host: "192.168.1.123"
     community: public
@@ -840,3 +851,11 @@ switch:
     payload_on: "1"
     payload_off: "0"
     vartype: Integer
+
+  - platform: snmp
+    name: "Raritan PDU Outlet 20"
+    host: "192.168.1.123"
+    community: public
+    baseoid: "1.3.6.1.4.1.13742.4.1.1.32"
+    payload_on: "1"
+    payload_off: "0"
